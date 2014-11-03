@@ -1,0 +1,182 @@
+# IBM Developer's Workframe/2 Make File Creation run at 21:07:14 on 08/11/93
+
+# Make File Creation run in directory:
+#   D:\GAME\VOL1N11;
+
+# Assumed INCLUDE environment variable path:
+#   D:\TOOLKT20\CPLUS\OS2H;
+#   D:\TOOLKT20\ASM\OS2INC;
+#   D:\IBMCPP\INCLUDE;
+#   D:\IBMCPP\IBMCLASS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+main.RES:  main.rc  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}RESOURCE.H  \
+   {$(INCLUDE002)}DIALOG.H  \
+   DIALOG.DLG  \
+     DIALOG.H  \
+   BTECH2.ICO  \
+   ABOUT.BMP  \
+   HEXMASK.BMP  \
+   MECH_SE.BMP  \
+   MECH_NE.BMP  \
+   MECH_N.BMP  \
+   MECH_NW.BMP  \
+   MECH_SW.BMP  \
+   MECH_S.BMP  \
+   CLRGRND.BMP  \
+   RUBBLE.BMP  \
+   WATER.BMP  \
+   LITEWOOD.BMP  \
+   HEAVWOOD.BMP  \
+   PAVEMENT.BMP  \
+   BRIDGE.BMP  \
+   BLDGLITE.BMP  \
+   BLDGMED.BMP  \
+   BLDGHEAV.BMP  \
+   BLDGHARD.BMP  \
+   DEBUG.MAK
+
+bitmap.OBJ:  bitmap.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   DEBUG.MAK
+
+files.OBJ:  files.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   DEBUG.MAK
+
+hexes.OBJ:  hexes.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}math.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}resource.h  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}terrain.hpp  \
+   {$(INCLUDE001)}map.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   DEBUG.MAK
+
+main.OBJ:  main.cpp  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   {$(INCLUDE001)}resource.h  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}target.hpp  \
+   {$(INCLUDE001)}dialog.h  \
+   {$(INCLUDE001)}files.hpp  \
+   {$(INCLUDE001)}menu.hpp  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}mech.hpp  \
+   {$(INCLUDE001)}terrain.hpp  \
+   {$(INCLUDE001)}map.hpp  \
+   DEBUG.MAK
+
+map.OBJ:  map.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}string.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}resource.h  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}terrain.hpp  \
+   {$(INCLUDE001)}map.hpp  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}target.hpp  \
+   {$(INCLUDE001)}mech.hpp  \
+   {$(INCLUDE001)}files.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   DEBUG.MAK
+
+mech.OBJ:  mech.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}resource.h  \
+   {$(INCLUDE001)}dialog.h  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}target.hpp  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}mech.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   DEBUG.MAK
+
+menu.OBJ:  menu.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   {$(INCLUDE001)}resource.h  \
+   {$(INCLUDE001)}dialog.h  \
+   {$(INCLUDE001)}menu.hpp  \
+   {$(INCLUDE001)}files.hpp  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}terrain.hpp  \
+   {$(INCLUDE001)}map.hpp  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}mech.hpp  \
+   DEBUG.MAK
+
+target.OBJ:  target.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}math.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}target.hpp  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}terrain.hpp  \
+   {$(INCLUDE001)}map.hpp  \
+   {$(INCLUDE001)}dialog.h  \
+   {$(INCLUDE001)}window.hpp  \
+   DEBUG.MAK
+
+target0.OBJ:  target0.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}math.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}target.hpp  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}terrain.hpp  \
+   DEBUG.MAK
+
+terrain.OBJ:  terrain.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}header.hpp  \
+   {$(INCLUDE001)}resource.h  \
+   {$(INCLUDE001)}bitmap.hpp  \
+   {$(INCLUDE001)}terrain.hpp  \
+   {$(INCLUDE001)}hexes.hpp  \
+   {$(INCLUDE001)}target.hpp  \
+   {$(INCLUDE001)}mech.hpp  \
+   {$(INCLUDE001)}files.hpp  \
+   {$(INCLUDE001)}window.hpp  \
+   DEBUG.MAK
+
+window.OBJ:  window.cpp  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+   {$(INCLUDE001)}window.hpp  \
+   DEBUG.MAK
